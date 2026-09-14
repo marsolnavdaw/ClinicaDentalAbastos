@@ -1,0 +1,65 @@
+/* Custom Styles and Accessibility Enhancements */
+
+/* Respeto estricto por la preferencia de reducción de movimiento */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Indicadores de Foco Visibles de Alta Accesibilidad (WCAG 2.2 AA) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #0D9488 !important;
+  outline-offset: 2px !important;
+}
+
+/* Ajuste de scroll suavizado en anclas de navegación */
+html {
+  scroll-padding-top: 4.5rem;
+}
+
+@media (min-width: 1024px) {
+  html {
+    scroll-padding-top: 5rem;
+  }
+}
+
+/* Tipografía por defecto y prevención de desbordamiento horizontal */
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: #1E293B;
+  background-color: #F8FAFC;
+  overflow-x: hidden;
+}
+
+/* Estilos de encabezado */
+h1, h2, h3, h4, .font-title {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* Ajuste de padding extra mediante CSS (apoyo extra a las clases de Tailwind) */
+section {
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+}
+
+@media (min-width: 768px) {
+  section {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+  }
+}
